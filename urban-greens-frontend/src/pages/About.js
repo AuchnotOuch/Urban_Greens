@@ -6,6 +6,7 @@ const About = () => {
         <div className="about">
             <div className="about-content">
                 <div className="about-section">
+                    <img className='catlogo' src='/images/catlogo.png' />
                     <h1>About Urban Green's Cats and Things</h1>
                     <p>
                         Urban Green's Cats and Things is the premier destination for cat lovers who want to blend modern style with the charm of feline companionship.

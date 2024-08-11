@@ -1,6 +1,6 @@
 .about {
     padding: 4rem 1rem;
-    background-color: white;
+    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,11 @@
 
 .about-section {
     flex: 1;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-section h1 {
@@ -59,4 +63,9 @@
 .owner-info p {
     font-size: 1rem;
     color: #555;
+}
+
+.catlogo {
+    width: 200px;
+    margin-top: 150px;
 }

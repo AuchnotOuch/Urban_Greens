@@ -2,7 +2,11 @@
     /* background-color: #007bff; */
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid lightblue;
+    /* border-bottom: 1px solid lightblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar ul {
@@ -29,4 +33,9 @@
     background-color: #007bff;
     border-radius: 4px;
     color: white;
+}
+
+.divider {
+    margin-top: 10px;
+    width: 300px;
 }

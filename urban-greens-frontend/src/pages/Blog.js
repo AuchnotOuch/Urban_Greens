@@ -1,3 +1,4 @@
+// /src/pages/Blog.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Blog.css';
@@ -25,7 +26,6 @@ const Blog = () => {
 
     return (
         <div className="blog">
-            <h1>Blog</h1>
             <div className="blog-grid">
                 {blogs.map(blog => (
                     <div
@@ -33,6 +33,7 @@ const Blog = () => {
                         className="blog-post"
                         onClick={() => openBlogModal(blog)}
                     >
+                        <img src={blog.imageUrl} alt={blog.title} className="blog-image" />
                         <h2>{blog.title}</h2>
                         <p>{blog.author} - {new Date(blog.date).toLocaleDateString()}</p>
                         <p>{blog.content.substring(0, 100)}...</p>

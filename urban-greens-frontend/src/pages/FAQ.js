@@ -4,8 +4,8 @@ import './FAQ.css';
 const FAQ = () => {
     return (
         <div>
-            <h1>Frequently Asked Questions</h1>
             <div className="faq">
+                <h1>Frequently Asked Questions</h1>
                 <h3>What are the store hours?</h3>
                 <p>We are open from 9 AM to 6 PM, Monday through Saturday.</p>
 

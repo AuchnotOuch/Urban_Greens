@@ -44,6 +44,7 @@ const seedBlogs = async () => {
         content: faker.lorem.paragraphs(3),
         author: faker.person.fullName(), // Updated to use faker.person.fullName
         tags: faker.lorem.words(3).split(' '),
+        imageUrl: faker.image.url()
     }));
 
     await Blog.insertMany(blogs);

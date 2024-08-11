@@ -28,6 +28,7 @@ const Navbar = () => {
                     <NavLink to="/cart" activeclassname="active-link">Cart</NavLink>
                 </li>
             </ul>
+            <img className="divider" src='/images/fancydivider.png' />
         </nav>
     );
 };

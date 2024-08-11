@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Contact.css'
 
@@ -20,7 +21,21 @@ const Contact = () => {
     };
 
     return (
-        <div>
+        <div className='container'>
+            <div className='socials'>
+                <Link>
+                    <i className="fa-brands fa-facebook"></i>
+                </Link>
+                <Link>
+                    <i className="fa-brands fa-twitter"></i>
+                </Link>
+                <Link>
+                    <i className="fa-brands fa-instagram"></i>
+                </Link>
+                <Link>
+                    <i className="fa-brands fa-tiktok"></i>
+                </Link>
+            </div>
             <h1>Contact Us</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Your Name" onChange={handleChange} value={formData.name} required />
