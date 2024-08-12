@@ -17,12 +17,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-// Serve static files from the React app
-app.use(express.static(path.resolve(__dirname, '../../urban-greens-frontend/build')));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../urban-greens-frontend/build', 'index.html'));
-});
 // Database connection
 mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log('MongoDB connected'))
@@ -32,6 +27,15 @@ mongoose.connect(process.env.MONGO_URI, {
 app.use('/api/products', productRoutes);
 app.use('/api/blogs', blogRoutes);
 app.use('/api/contacts', contactRoutes);
+
+// Serve static files from the React app in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.resolve(__dirname, '../../urban-greens-frontend/build')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, '../../urban-greens-frontend/build', 'index.html'));
+    });
+}
 
 // Start server
 const PORT = process.env.PORT || 5000;
